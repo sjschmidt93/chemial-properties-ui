@@ -15,8 +15,7 @@ import {
   Paper
 } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-
-const chemicals = ['Benzaldehyde', 'Toluene'];
+import { typeAheadApi } from './typeahead-api/typeahead-api';
 
 const theme = createTheme({
   palette: {
@@ -42,20 +41,25 @@ function ChemicalDetail({ chemical }: { chemical: string }) {
   );
 }
 
+type Chemical = {
+  iupacName?: string,
+  inchiKey: string,
+  name: string
+};
+
 function MainContent() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredChemicals, setFilteredChemicals] = useState<string[]>([]);
+  const [filteredChemicals, setFilteredChemicals] = useState<Chemical[]>([]);
+  const filteredChemicalNames = filteredChemicals.map(chemical => chemical.name);
   const [selectedTab, setSelectedTab] = useState('UI');
   const navigate = useNavigate();
 
   useEffect(() => {
     if (searchTerm) {
-      const results = chemicals.filter(chemical =>
-        chemical.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      const results = typeAheadApi.getChemicalsWithInput(searchTerm);
       setFilteredChemicals(results);
     } else {
-      setFilteredChemicals(chemicals); // Show all chemicals when search is empty
+      setFilteredChemicals([]);
     }
   }, [searchTerm]);
 
@@ -63,8 +67,8 @@ function MainContent() {
     setSearchTerm(event.target.value);
   };
 
-  const handleChemicalClick = (chemical: string) => {
-    navigate(`/chemical/${chemical.toLowerCase()}`);
+  const handleChemicalClick = (chemical: Chemical) => {
+    navigate(`/chemical/${chemical.inchiKey}`);
   };
 
   const renderContent = () => {
@@ -84,7 +88,7 @@ function MainContent() {
           <TextField
             fullWidth
             variant="outlined"
-            label="Search for chemicals"
+            label="Search by IUPAC name, common name, or InChI key"
             value={searchTerm}
             onChange={handleSearchChange}
             sx={{ mb: 2 }}
@@ -100,7 +104,7 @@ function MainContent() {
                   color: 'text.primary', // Ensure text is visible
                 }}
               >
-                <ListItemText primary={chemical} />
+                <ListItemText primary={chemical.name} />
               </ListItem>
             ))}
           </List>

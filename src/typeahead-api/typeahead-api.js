@@ -1,7 +1,7 @@
 
 import lookupList from './typeahead-lookup-list.json' assert { type: 'json' };
 
-const MAX_RESULTS = 10
+const MAX_RESULTS = 20;
 
 class TypeaheadApi {
   toChemicalWithLowerCaseName(chemical) {
@@ -23,4 +23,4 @@ class TypeaheadApi {
 
 export const typeAheadApi = new TypeaheadApi();
 
-console.log(typeAheadApi.getChemicalsWithInput('a'))
+//console.log(typeAheadApi.getChemicalsWithInput('a'))

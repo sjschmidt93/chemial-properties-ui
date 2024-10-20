@@ -50,7 +50,6 @@ type Chemical = {
 function MainContent() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredChemicals, setFilteredChemicals] = useState<Chemical[]>([]);
-  const filteredChemicalNames = filteredChemicals.map(chemical => chemical.name);
   const [selectedTab, setSelectedTab] = useState('UI');
   const navigate = useNavigate();
 
@@ -79,7 +78,9 @@ function MainContent() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
+            minHeight: '80vh', // Use 80vh to account for the AppBar
+            pt: 4, // Add some padding at the top
           }}
         >
           <Typography variant="h4" component="h1" gutterBottom color="text.primary">
@@ -91,28 +92,42 @@ function MainContent() {
             label="Search by IUPAC name, common name, or InChI key"
             value={searchTerm}
             onChange={handleSearchChange}
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, maxWidth: '600px' }}
           />
-          <List sx={{ width: '100%' }}>
-            {filteredChemicals.map((chemical, index) => (
-              <ListItem 
-                key={index} 
-                button 
-                onClick={() => handleChemicalClick(chemical)}
-                sx={{ 
-                  '&:hover': { backgroundColor: 'rgba(106, 13, 173, 0.1)' },
-                  color: 'text.primary', // Ensure text is visible
-                }}
-              >
-                <ListItemText primary={chemical.name} />
-              </ListItem>
-            ))}
-          </List>
-          {searchTerm && filteredChemicals.length === 0 && (
-            <Typography variant="body1" color="text.secondary">
-              No matching chemicals found.
-            </Typography>
-          )}
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '600px',
+              height: '300px', // Fixed height to prevent layout shifts
+              overflowY: 'auto', // Allow scrolling within this box
+            }}
+          >
+            {filteredChemicals.length > 0 ? (
+              <List>
+                {filteredChemicals.map((chemical, index) => (
+                  <ListItem 
+                    key={index} 
+                    button 
+                    onClick={() => handleChemicalClick(chemical)}
+                    sx={{ 
+                      '&:hover': { backgroundColor: 'rgba(106, 13, 173, 0.1)' },
+                      color: 'text.primary',
+                    }}
+                  >
+                    <ListItemText primary={chemical.name} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              searchTerm && (
+                <Box sx={{ p: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    No matching chemicals found.
+                  </Typography>
+                </Box>
+              )
+            )}
+          </Box>
         </Box>
       );
     } else {
@@ -123,6 +138,7 @@ function MainContent() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            minHeight: '80vh',
           }}
         >
           <Paper elevation={3} sx={{ p: 3, maxWidth: '100%', width: '400px' }}>
@@ -163,7 +179,7 @@ function MainContent() {
           </Button>
         </Toolbar>
       </AppBar>
-      <Container maxWidth="sm" sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', py: 4 }}>
+      <Container maxWidth="lg" sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
         <Routes>
           <Route path="/" element={renderContent()} />
           <Route path="/chemical/:name" element={<ChemicalDetail chemical="Placeholder" />} />

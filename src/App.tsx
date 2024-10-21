@@ -12,10 +12,12 @@ import {
   Button,
   ThemeProvider,
   createTheme,
-  Paper
+  Paper,
+  CircularProgress
 } from '@mui/material';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import { typeAheadApi } from './typeahead-api/typeahead-api';
+import axios from 'axios';
 
 const theme = createTheme({
   palette: {
@@ -34,14 +36,61 @@ type Chemical = {
   name: string
 };
 
-function ChemicalDetail({ chemical }: { chemical: string }) {
+function ChemicalDetail() {
+  const { inchiKey } = useParams<{ inchiKey: string }>();
+  const [chemicalName, setChemicalName] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchChemicalDetails = async () => {
+      try {
+        const response = await axios.get(
+          `https://w972i5rc5l.execute-api.us-east-2.amazonaws.com/v0/?search=${inchiKey}&return_all=true`,
+          {
+            headers: {
+              Auth: 'Bearer e53c49c7df86fb1bc9c0361ff31a709d9d7eea12'
+            }
+          }
+        );
+        setChemicalName(response.data.chemical.name);
+      } catch (err) {
+        setError('Failed to fetch chemical details');
+        console.error('Error fetching chemical details:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchChemicalDetails();
+  }, [inchiKey]);
+
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box sx={{ p: 3 }}>
+        <Typography variant="h4" gutterBottom color="error">
+          Error
+        </Typography>
+        <Typography variant="body1">{error}</Typography>
+      </Box>
+    );
+  }
+
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" gutterBottom>
-        {chemical}
+        {chemicalName || 'Chemical Details'}
       </Typography>
       <Typography variant="body1">
-        Detailed information about {chemical} would go here.
+        Detailed information about {chemicalName} would go here.
       </Typography>
     </Box>
   );
@@ -207,7 +256,7 @@ function MainContent() {
       <Container maxWidth="lg" sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
         <Routes>
           <Route path="/" element={selectedTab === 'UI' ? <UIPage /> : <APIPage />} />
-          <Route path="/chemical/:name" element={<ChemicalDetail chemical="Placeholder" />} />
+          <Route path="/chemical/:inchiKey" element={<ChemicalDetail />} />
         </Routes>
       </Container>
     </Box>

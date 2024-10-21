@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Box, Typography, CircularProgress } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { SearchChemicalsResponse } from '../../types/SearchChemicalsResponseType';
+import mockResponse from '../../../mocks/mock-get-chemical-response.json';
 
 export function ChemicalDetailPage() {
   const { inchiKey } = useParams<{ inchiKey: string }>();
+  const [searchChemicalResponse, setSearchChemicalResponse] = useState<SearchChemicalsResponse>();
   const [chemicalName, setChemicalName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -20,10 +23,12 @@ export function ChemicalDetailPage() {
             }
           }
         );
-        setChemicalName(response.data.chemical.name);
+        setSearchChemicalResponse(response.data);
       } catch (err) {
-        setError('Failed to fetch chemical details');
+        setSearchChemicalResponse(mockResponse);
+        // setError('Failed to fetch chemical details');
         console.error('Error fetching chemical details:', err);
+        setLoading(false);
       } finally {
         setLoading(false);
       }
@@ -32,7 +37,7 @@ export function ChemicalDetailPage() {
     fetchChemicalDetails();
   }, [inchiKey]);
 
-  if (loading) {
+  if (loading || !searchChemicalResponse) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <CircularProgress />
@@ -57,7 +62,7 @@ export function ChemicalDetailPage() {
         {chemicalName || 'Chemical Details'}
       </Typography>
       <Typography variant="body1">
-        Detailed information about {chemicalName} would go here.
+        Detailed information about {searchChemicalResponse.chemical.name} would go here.
       </Typography>
     </Box>
   );

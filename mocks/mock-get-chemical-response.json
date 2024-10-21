@@ -1,0 +1,296 @@
+{
+  "chemical": {
+      "inchi_key": "HXKKHQJGJAFBHI-UHFFFAOYSA-N",
+      "iupac_name": "1-aminopropan-2-ol",
+      "name": "1-AMINO-2-PROPANOL",
+      "synonyms": [
+          "78-96-6",
+          "1-AMINO-2-PROPANOL",
+          "Isopropanolamine",
+          "Amino-2-propanol",
+          "Monoisopropanolamine",
+          "Threamine",
+          "2-Propanol, 1-amino-",
+          "2-Hydroxypropylamine",
+          "Mipa",
+          "DL-1-Amino-2-propanol",
+          "1-Methyl-2-aminoethanol",
+          "2-Hydroxypropanamine",
+          "2-Amino-1-methylethanol",
+          "1-Amino-2-hydroxypropane",
+          "2-Hydroxy-1-propylamine",
+          "(+/-)-1-Amino-2-propanol",
+          "Mono-iso-propanolamine",
+          "alpha-Aminoisopropyl alcohol",
+          "1-amino-propan-2-ol",
+          "(RS)-1-amino-2-propanol",
+          ".alpha.-Aminoisopropyl alcohol",
+          "CCRIS 2284",
+          "(RS)-1-Amino-2-hydroxypropane",
+          "HSDB 5224",
+          "(+/-)-Isopropanolamine",
+          "2-Hydroxy-1-propanamine",
+          "AI3-14653",
+          "NSC 3188",
+          "beta-Aminoisopropanol",
+          "D-1-amino-2-propanol",
+          "D-1-aminopropan-2-ol",
+          "MFCD00008139",
+          "UE40BY1BZW",
+          "DTXSID9021764",
+          "CHEBI:19030",
+          "DL-Isopropanolamine",
+          "NSC-3188",
+          "2-Propanol, 1-amino- (8CI,9CI)",
+          "1674-56-2",
+          "2-Propanol, 1-amino-, (.+/-.)-",
+          "(+/-)-1-AMino-2-propanol--d6",
+          "(S)-(+)-Isopropanolamine",
+          "EINECS 201-162-7",
+          "UNII-UE40BY1BZW",
+          "BRN 0605275",
+          "2-Propanol, 1-amino-, (R)-",
+          "2-Propanol, 1-amino-, (S)-",
+          "Aminopropan-2-ol",
+          "1-amino-2 propanol",
+          "3-amino-2-propanol",
+          "3-aminopropan-2-ol",
+          "2-hydroxy-propylamine",
+          "2-hydroxypropyl-amine",
+          "(2-HYDROXY-2-METHYLETHYL)AMINE",
+          "1-Aminoisopropylalcohol",
+          "1-Aminopropanol-(2)",
+          "1-amino-propane-2-ol",
+          "1-Amin-iso-proylalcohol",
+          "rac-1-amino-2-propanol",
+          "2-hydroxy-1-aminopropane",
+          "Amino-2-propanol, 93%",
+          "bmse000305",
+          "EC 201-162-7",
+          "(rac)-1-amino-2-propanol",
+          "racemic 1-amino-2-propanol",
+          "1-amino-2(R,S)-propanol",
+          "WLN: Z1YQ1",
+          "(2rs)-1-amino-2-propanol",
+          "1-amino-2-Hydroxypropanamine",
+          "4-04-00-01665 (Beilstein Handbook Reference)",
+          "(2RS) 1-amino-2-propanol",
+          "2-hydroxy-2-methyl-ethylamine",
+          "ISOPROPANOLAMINE [INCI]",
+          "CHEMBL326602",
+          "DTXCID901764",
+          "FEMA NO. 3965",
+          "NSC3188",
+          "(.+/-.)-1-Amino-2-propanol",
+          "BCP08083",
+          "1-AMINO-2-PROPANOL [FHFI]",
+          "1-AMINO-2-PROPANOL [HSDB]",
+          "Tox21_301704",
+          "BBL027685",
+          "DL-1-Amino-2-propanol, >=90%",
+          "STL308732",
+          "AKOS000120495",
+          "AKOS016042334",
+          "CS-W016685",
+          "HY-W015969",
+          "SB44651",
+          "SB44696",
+          "SB83757",
+          "CAS-78-96-6",
+          "NCGC00257540-01",
+          "1-AMINO-2-PROPANOL, (+/-)-",
+          "SY002691",
+          "DB-013106",
+          "A0406",
+          "A1229",
+          "A5358",
+          "AM20100779",
+          "NS00007157",
+          "EN300-20160",
+          "C05771",
+          "G75932",
+          "(+/-)-1-Amino-2-propanol, analytical standard",
+          "Q161580",
+          "J-660020",
+          "F2190-0369",
+          "Z104477092",
+          "(?)-1-Amino-2-propanol, 94%, remainder 2-amino-1-propanol"
+      ]
+  },
+  "properties": [
+      {
+          "aggregate": 0.96,
+          "all_measurements": [
+              {
+                  "metadata": {
+                      "misc": {
+                          "substance_temperature": 293.15,
+                          "water_temperature": 277.15
+                      }
+                  },
+                  "type": "specific_gravity",
+                  "value": 0.96
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "substance_temperature": 293.15
+                      }
+                  },
+                  "type": "specific_gravity",
+                  "value": 0.96
+              }
+          ],
+          "type": "specific_gravity"
+      },
+      {
+          "all_measurements": [
+              {
+                  "metadata": {},
+                  "type": "vapor_pressure",
+                  "value": 0
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "temperature": 293.15
+                      }
+                  },
+                  "type": "vapor_pressure",
+                  "value": 0
+              }
+          ],
+          "type": "vapor_pressure"
+      },
+      {
+          "aggregate": 431.82,
+          "all_measurements": [
+              {
+                  "metadata": {
+                      "misc": {
+                          "pressure": 1
+                      }
+                  },
+                  "type": "boiling_point",
+                  "value": 432.61
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "pressure": 1,
+                          "range": {
+                              "max": 430.93,
+                              "mean": 430.09,
+                              "min": 429.26
+                          }
+                      }
+                  },
+                  "type": "boiling_point",
+                  "value": 430.09
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "pressure": 1,
+                          "range": {
+                              "max": 434.15,
+                              "mean": 433.65,
+                              "min": 433.15
+                          }
+                      }
+                  },
+                  "type": "boiling_point",
+                  "value": 433.65
+              },
+              {
+                  "metadata": {},
+                  "type": "boiling_point",
+                  "value": 432.65
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "range": {
+                              "max": 430.93,
+                              "mean": 430.09,
+                              "min": 429.26
+                          }
+                      }
+                  },
+                  "type": "boiling_point",
+                  "value": 430.09
+              }
+          ],
+          "type": "boiling_point"
+      },
+      {
+          "aggregate": 274.53,
+          "all_measurements": [
+              {
+                  "metadata": {},
+                  "type": "melting_point",
+                  "value": 274.89
+              },
+              {
+                  "metadata": {},
+                  "type": "melting_point",
+                  "value": 274.54
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "pressure": 1,
+                          "range": {
+                              "max": 299.15,
+                              "mean": 298.15,
+                              "min": 297.15
+                          }
+                      }
+                  },
+                  "type": "melting_point",
+                  "value": 298.15
+              },
+              {
+                  "metadata": {},
+                  "type": "melting_point",
+                  "value": 274.15
+              }
+          ],
+          "type": "melting_point"
+      },
+      {
+          "aggregate": 350.3,
+          "all_measurements": [
+              {
+                  "metadata": {
+                      "misc": {
+                          "measurement_type": "closed cup"
+                      }
+                  },
+                  "type": "flash_point",
+                  "value": 350.37
+              },
+              {
+                  "metadata": {},
+                  "type": "flash_point",
+                  "value": 350.37
+              },
+              {
+                  "metadata": {
+                      "misc": {
+                          "measurement_type": "closed cup"
+                      }
+                  },
+                  "type": "flash_point",
+                  "value": 350.15
+              },
+              {
+                  "metadata": {},
+                  "type": "flash_point",
+                  "value": 349.75
+              }
+          ],
+          "type": "flash_point"
+      }
+  ]
+}

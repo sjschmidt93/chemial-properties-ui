@@ -47,32 +47,42 @@ function ChemicalDetail({ chemical }: { chemical: string }) {
   );
 }
 
+interface TabButtonProps {
+  label: string;
+  isSelected: boolean;
+  onClick: () => void;
+}
+
+function TabButton({ label, isSelected, onClick }: TabButtonProps) {
+  return (
+    <Button 
+      color="inherit" 
+      onClick={onClick}
+      sx={{ 
+        fontSize: '1.5rem', 
+        opacity: isSelected ? 1 : 0.7,
+        fontWeight: isSelected ? 'bold' : 'normal'
+      }}
+    >
+      {label}
+    </Button>
+  );
+}
+
 function TabNavigation({ selectedTab, setSelectedTab }: { selectedTab: string, setSelectedTab: (tab: string) => void }) {
   return (
-    <AppBar position="static" sx={{ height: '20vh', width: '100%' }}>
+    <AppBar position="static" sx={{ height: '15vh', width: '100%' }}>
       <Toolbar sx={{ height: '100%', justifyContent: 'center' }}>
-        <Button 
-          color="inherit" 
+        <TabButton 
+          label="UI"
+          isSelected={selectedTab === 'UI'}
           onClick={() => setSelectedTab('UI')}
-          sx={{ 
-            fontSize: '1.5rem', 
-            opacity: selectedTab === 'UI' ? 1 : 0.7,
-            fontWeight: selectedTab === 'UI' ? 'bold' : 'normal'
-          }}
-        >
-          UI
-        </Button>
-        <Button 
-          color="inherit" 
+        />
+        <TabButton 
+          label="API"
+          isSelected={selectedTab === 'API'}
           onClick={() => setSelectedTab('API')}
-          sx={{ 
-            fontSize: '1.5rem', 
-            opacity: selectedTab === 'API' ? 1 : 0.7,
-            fontWeight: selectedTab === 'API' ? 'bold' : 'normal'
-          }}
-        >
-          API
-        </Button>
+        />
       </Toolbar>
     </AppBar>
   );
@@ -106,9 +116,9 @@ function UIPage() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '80vh',
-        pt: 4,
+        justifyContent: 'flex-start',
+        minHeight: '85vh',
+        pt: 8,
       }}
     >
       <Typography variant="h4" component="h1" gutterBottom color="text.primary">
@@ -167,13 +177,17 @@ function APIPage() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '80vh',
+        justifyContent: 'flex-start',
+        minHeight: '85vh',
+        pt: 8,
       }}
     >
-      <Paper elevation={3} sx={{ p: 3, maxWidth: '100%', width: '400px' }}>
+      <Typography variant="h4" component="h1" gutterBottom color="text.primary">
+        API Access
+      </Typography>
+      <Paper elevation={3} sx={{ p: 3, maxWidth: '100%', width: '600px' }}>
         <Typography variant="body1" align="center" color="text.primary">
-          Coming soon. For now, you can access the API at{' '}
+          You can access our API directly at{' '}
           <a href="https://rapidapi.com/hazmatteam-hazmatteam-default/api/chemical-properties" target="_blank" rel="noopener noreferrer">
             RapidAPI
           </a>

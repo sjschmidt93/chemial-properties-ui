@@ -9,9 +9,14 @@ type Chemical = {
   name: string
 };
 
+type ChemicalWithInchiKey = {
+  name: string,
+  inchiKey: string | undefined
+};
+
 export function UIPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredChemicals, setFilteredChemicals] = useState<Chemical[]>([]);
+  const [filteredChemicals, setFilteredChemicals] = useState<ChemicalWithInchiKey[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +32,7 @@ export function UIPage() {
     setSearchTerm(event.target.value);
   };
 
-  const handleChemicalClick = (chemical: Chemical) => {
+  const handleChemicalClick = (chemical: ChemicalWithInchiKey) => {
     navigate(`/chemical/${chemical.inchiKey}`);
   };
 

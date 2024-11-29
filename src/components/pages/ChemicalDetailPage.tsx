@@ -20,14 +20,17 @@ import {
   Button,
   Link,
   Collapse,
+  CircularProgress,
+  Divider,
+  IconButton,
+  Tooltip,
 } from '@mui/material';
-import { ExpandMore, ExpandLess } from '@mui/icons-material';
+import { ExpandMore, ExpandLess, Search, OpenInNew, FilterList } from '@mui/icons-material';
 
 export function ChemicalDetailPage() {
   const { inchiKey } = useParams<{ inchiKey: string }>();
   const [searchChemicalResponse, setSearchChemicalResponse] = useState<SearchChemicalsResponse>();
-  const [chemicalName, setChemicalName] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [synonymFilter, setSynonymFilter] = useState('');
   const [showAllSynonyms, setShowAllSynonyms] = useState(false);
@@ -40,7 +43,7 @@ export function ChemicalDetailPage() {
         setSearchChemicalResponse(response);
       } catch (err) {
         console.error('Error fetching chemical details:', err);
-        setLoading(false);
+        setError('Failed to fetch chemical details. Please try again later.');
       } finally {
         setLoading(false);
       }
@@ -55,16 +58,6 @@ export function ChemicalDetailPage() {
     ) ?? [];
   }, [searchChemicalResponse, synonymFilter]);
 
-  if (loading || !searchChemicalResponse) {
-    return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        "Loading..."
-      </Box>
-    );
-  }
-
-  const { chemical, properties } = searchChemicalResponse;
-
   const displayedSynonyms = showAllSynonyms ? filteredSynonyms : filteredSynonyms.slice(0, 10);
 
   const formatValue = (value: number) => {
@@ -78,6 +71,14 @@ export function ChemicalDetailPage() {
     }));
   };
 
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
+
   if (error) {
     return (
       <Box sx={{ p: 3 }}>
@@ -89,47 +90,77 @@ export function ChemicalDetailPage() {
     );
   }
 
+  if (!searchChemicalResponse) {
+    return (
+      <Box sx={{ p: 3 }}>
+        <Typography variant="h4" gutterBottom>
+          No data available
+        </Typography>
+      </Box>
+    );
+  }
+
+  const { chemical, properties } = searchChemicalResponse;
+
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ p: 3, maxWidth: 1200, margin: '0 auto' }}>
       <Card elevation={3}>
         <CardContent>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" gutterBottom color="primary">
             {chemical.name}
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" gutterBottom>
             {chemical.iupac_name}
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            InChI Key: {chemical.inchi_key}
-          </Typography>
-          <Link
-            href={`https://pubchem.ncbi.nlm.nih.gov/compound/${chemical.inchi_key}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View on PubChem
-          </Link>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+            <Typography variant="body2" sx={{ mr: 2 }}>
+              InChI Key: {chemical.inchi_key}
+            </Typography>
+            <Tooltip title="View on PubChem">
+              <IconButton
+                component={Link}
+                href={`https://pubchem.ncbi.nlm.nih.gov/compound/${chemical.inchi_key}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="small"
+              >
+                <OpenInNew />
+              </IconButton>
+            </Tooltip>
+          </Box>
+          <Divider sx={{ my: 2 }} />
           <Box sx={{ mt: 2 }}>
             <Typography variant="h6" gutterBottom>
-              Synonyms:
+              Synonyms
             </Typography>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Filter synonyms"
-              value={synonymFilter}
-              onChange={(e) => setSynonymFilter(e.target.value)}
-              sx={{ mb: 2 }}
-            />
-            <Box sx={{ maxHeight: '200px', overflowY: 'auto' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+              <TextField
+                variant="outlined"
+                size="small"
+                label="Filter synonyms"
+                value={synonymFilter}
+                onChange={(e) => setSynonymFilter(e.target.value)}
+                InputProps={{
+                  startAdornment: <Search color="action" sx={{ mr: 1 }} />,
+                }}
+                sx={{ flexGrow: 1, mr: 2 }}
+              />
+              <Tooltip title="Filter synonyms">
+                <IconButton onClick={() => setSynonymFilter('')} size="small">
+                  <FilterList />
+                </IconButton>
+              </Tooltip>
+            </Box>
+            <Paper variant="outlined" sx={{ p: 2, maxHeight: '200px', overflowY: 'auto' }}>
               {displayedSynonyms.map((synonym, index) => (
                 <Chip key={index} label={synonym} sx={{ m: 0.5 }} />
               ))}
-            </Box>
+            </Paper>
             {filteredSynonyms.length > 10 && (
               <Button
                 onClick={() => setShowAllSynonyms(!showAllSynonyms)}
                 sx={{ mt: 1 }}
+                variant="text"
               >
                 {showAllSynonyms ? 'Show Less' : 'Show More'}
               </Button>
@@ -139,7 +170,7 @@ export function ChemicalDetailPage() {
       </Card>
 
       <Box sx={{ mt: 4 }}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom color="primary">
           Properties
         </Typography>
         <Grid container spacing={3}>
@@ -147,22 +178,25 @@ export function ChemicalDetailPage() {
             <Grid item xs={12} md={6} key={index}>
               <Card>
                 <CardContent>
-                  <Typography variant="h6" gutterBottom>
+                  <Typography variant="h6" gutterBottom color="secondary">
                     {property.type.charAt(0).toUpperCase() + property.type.slice(1).replace('_', ' ')}
                   </Typography>
                   {property.aggregate !== undefined && (
                     <Typography variant="h4" gutterBottom color="primary">
-                      Aggregate: {formatValue(property.aggregate)}
+                      {formatValue(property.aggregate)}
                     </Typography>
                   )}
                   <Button
                     onClick={() => togglePropertyExpansion(property.type)}
                     endIcon={expandedProperties[property.type] ? <ExpandLess /> : <ExpandMore />}
+                    variant="outlined"
+                    size="small"
+                    sx={{ mb: 2 }}
                   >
                     {expandedProperties[property.type] ? 'Hide' : 'Show'} Measurements
                   </Button>
                   <Collapse in={expandedProperties[property.type]}>
-                    <TableContainer component={Paper} sx={{ mt: 2 }}>
+                    <TableContainer component={Paper} variant="outlined">
                       <Table size="small">
                         <TableHead>
                           <TableRow>
@@ -179,7 +213,9 @@ export function ChemicalDetailPage() {
                                   <ul style={{ margin: 0, paddingInlineStart: '20px' }}>
                                     {Object.entries(measurement.metadata.misc).map(([key, value]) => (
                                       <li key={key}>
-                                        {key}: {JSON.stringify(value)}
+                                        <Typography variant="body2">
+                                          <strong>{key}:</strong> {JSON.stringify(value)}
+                                        </Typography>
                                       </li>
                                     ))}
                                   </ul>
@@ -199,4 +235,4 @@ export function ChemicalDetailPage() {
       </Box>
     </Box>
   );
-};
+}

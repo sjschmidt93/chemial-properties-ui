@@ -145,11 +145,6 @@ export function ChemicalDetailPage() {
                 }}
                 sx={{ flexGrow: 1, mr: 2 }}
               />
-              <Tooltip title="Filter synonyms">
-                <IconButton onClick={() => setSynonymFilter('')} size="small">
-                  <FilterList />
-                </IconButton>
-              </Tooltip>
             </Box>
             <Paper variant="outlined" sx={{ p: 2, maxHeight: '200px', overflowY: 'auto' }}>
               {displayedSynonyms.map((synonym, index) => (

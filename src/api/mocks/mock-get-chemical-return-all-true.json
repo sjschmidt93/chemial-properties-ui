@@ -1,0 +1,721 @@
+{
+    "chemical": {
+        "inchi_key": "FHIVAFMUCKRCQO-UHFFFAOYSA-N",
+        "iupac_name": "diethoxy-(6-methyl-2-propan-2-ylpyrimidin-4-yl)oxy-sulfanylidene-lambda5-phosphane",
+        "name": "DIAZINON",
+        "synonyms": [
+            "diazinon",
+            "Dimpylate",
+            "333-41-5",
+            "Diazinone",
+            "Oleodiazinon",
+            "Ciazinon",
+            "Neocidol",
+            "Dassitox",
+            "Diazitol",
+            "Ektoband",
+            "Nedcidol",
+            "Spectracide",
+            "Antigal",
+            "Basudin",
+            "Bazuden",
+            "Dacutox",
+            "Dazzel",
+            "Diazide",
+            "Diazol",
+            "Exodin",
+            "Flytrol",
+            "Galesan",
+            "Nucidol",
+            "Sarolex",
+            "Dicid",
+            "Alfa-tox",
+            "Diazajet",
+            "Dimpylat",
+            "Garden Tox",
+            "Bassadinon",
+            "Terminator",
+            "Compass",
+            "Disonex",
+            "Dizinon",
+            "Drawizon",
+            "Kayazinon",
+            "Kayazol",
+            "Meodinon",
+            "Dyzol",
+            "Nipsan",
+            "Diazinon ag 500",
+            "Knox-out",
+            "Delzinon",
+            "Dimpylatum",
+            "Dipofene",
+            "Dizictol",
+            "Neodinon",
+            "Optimizer",
+            "Bazudin",
+            "Dizinil",
+            "Srolex",
+            "Basudin 10 G",
+            "Geigy 24480",
+            "Basudin S",
+            "Knox Out 2FM",
+            "Diagran",
+            "Fezudin",
+            "NCI-C08673",
+            "AG-500",
+            "G-24480",
+            "Dimpylate [INN]",
+            "ENT 19,507",
+            "Isopropylmethylpyrimidyl diethyl thiophosphate",
+            "Diziktol",
+            "O,O-Diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl) phosphorothioate",
+            "O,O-Diethyl 2-isopropyl-4-methylpyrimidyl-6-thiophosphate",
+            "New Z Diazinon",
+            "G 301",
+            "4-Pyrimidinol, 2-isopropyl-6-methyl-, O-ester with O,O-diethyl phosphorothioate",
+            "Diethyl 4-(2-isopropyl-6-methylpyrimidinyl)phosphorothionate",
+            "O-2-Isopropyl-4-methylpyrimidyl-O,O-diethyl phosphorothioate",
+            "Optimizer Insecticide",
+            "O,O-Diethyl O-(2-isopropyl-4-methyl-6-pyrimidyl) thionophosphate",
+            "CHEBI:34682",
+            "O,O-Diethyl O-6-methyl-2-isopropyl-4-pyrimidinyl phosphorothioate",
+            "NSC-8938",
+            "Phosphorothioate, O,O-diethyl O-6-(2-isopropyl-4-methylpyrimidyl)",
+            "Thiophosphate de O,O-diethyle et de O-2-isopropyl-4-methyl-6-pyrimidyle",
+            "Diethyl 2-isopropyl-4-methyl-6-pyrimidyl thionophosphate",
+            "Phosphorothioic acid, O,O-diethyl O-(6-methyl-2-(1-methylethyl)-4-pyrimidinyl) ester",
+            "YUS1M1Q929",
+            "Diethyl 2-isopropyl-4-methyl-6-pyrimidinyl phosphorothionate",
+            "DTXSID9020407",
+            "O,O-Diethyl 2-isopropyl-6-methyl-4-pyrimidinylphosphorothioate",
+            "NSC8938",
+            "Dimpylate (INN)",
+            "O,O-Diethyl-O-(2-isopropyl-4-methyl-pyrimidin-6-yl)-monothiofosfaat",
+            "Diazinon; Dimpylate",
+            "Phosphorothioic acid, O,O-diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl) ester",
+            "Phosphorothioic acid, O,O-diethylO-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester",
+            "NCGC00091073-01",
+            "Bazudine",
+            "Neotsidol",
+            "O,O-Diethyl O-(2-isopropyl-4-methyl-6-pyrimidinyl) phosphorothioate",
+            "O,O-diethyl O-[6-methyl-2-(1-methylethyl)pyrimidin-4-yl] thiophosphate",
+            "Kleen-Dok",
+            "Diazinon, analytical standard",
+            "DTXCID50407",
+            "KFM Blowfly Dressing",
+            "Compass (insecticide)",
+            "Caswell No. 342",
+            "gardentox",
+            "Dimpilato",
+            "Antlak",
+            "Diaterr-fos",
+            "Dimpylatum [INN-Latin]",
+            "O,O-Diaethyl-O-(2-isopropyl-4-methyl-pyrinidin-6-yl)-monothiophosphat",
+            "O,O-Diethyl O-(2-isopropyl-4-methyl-6-pyrimidyl) phosphorothioate",
+            "Cooper's Flystrike Powder",
+            "Dimpilato [INN-Spanish]",
+            "NSC 8938",
+            "Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester",
+            "Diazinon [ANSI:BSI:ISO]",
+            "CAS-333-41-5",
+            "CCRIS 204",
+            "HSDB 303",
+            "Knox Out Yellow Jacket Contorl",
+            "OMS 469",
+            "EINECS 206-373-8",
+            "PT 265",
+            "EPA Pesticide Chemical Code 057801",
+            "BRN 0273790",
+            "UNII-YUS1M1Q929",
+            "Spertacide",
+            "Bazanon",
+            "AI3-19507",
+            "Diethyl dimpylatum",
+            "Dimpylate, INN",
+            "Basudin 5G",
+            "Spectracide 25EC",
+            "G 24480",
+            "Agridin 60",
+            "Basudin 10G",
+            "Spectrum_001777",
+            "Dimpylate [INN:BAN]",
+            "DIAZINON [HSDB]",
+            "DIAZINON [IARC]",
+            "New Z Diazinon (TN)",
+            "SpecPlus_000344",
+            "DIAZINON [ISO]",
+            "DIAZINON [MI]",
+            "O,O-Diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl)phosphorothioate",
+            "O,O-Diethyl-O-(2-isopropyl-4-methyl-6-pyrimidyl)phosphorothioate",
+            "Spectrum2_001226",
+            "Spectrum3_000802",
+            "Spectrum4_000642",
+            "Spectrum5_001929",
+            "Thiophosphoric acid 2-isopropyl-4-methyl-6-pyrimidyl diethyl ester",
+            "O,O-Diethyl-O-(2-isopropyl-4-methyl-6-pyrimidinyl)-phosphorothioate",
+            "Phosphorothioic acid, O,O-diethyl O-(isopropylmethylpyrimidinyl) ester",
+            "DIMPYLATE [MART.]",
+            "O,O-Diaethyl-O-(2-isopropyl-4-methyl)-6-pyrimidyl-thionophosphat [German]",
+            "O,O-Diaethyl-O-(2-isopropyl-4-methyl-pyrimidin-6-yl)-monothiophosphat [German]",
+            "O,O-Diethyl O-(6-methyl-2-(1-methylethyl)-4-pyrimidinyl)phosphorothioate",
+            "O,O-Diethyl-O-(2-isopropyl-4-methyl-pyrimidin-6-yl)-monothiofosfaat [Dutch]",
+            "O,O-Dietil-O-(2-isopropil-4-metil-pirimidin-6-il)-monotiofosfato [Italian]",
+            "DIMPYLATE [WHO-DD]",
+            "Optimizer Insecticide (TN)",
+            "Thiophosphate de O,O-diethyle et de O-2-isopropyl-4-methyl-6-pyrimidyle [French]",
+            "SCHEMBL17453",
+            "BSPBio_002263",
+            "KBioGR_000983",
+            "KBioSS_002258",
+            "5-23-11-00187 (Beilstein Handbook Reference)",
+            "MLS002207243",
+            "BIDD:ER0457",
+            "DivK1c_006440",
+            "SPBio_001072",
+            "CHEMBL388560",
+            "FHIVAFMUCKRCQO-UHFFFAOYSA-",
+            "KBio1_001384",
+            "KBio2_002257",
+            "KBio2_004825",
+            "KBio2_007393",
+            "KBio3_001763",
+            "AMY3613",
+            "HMS3264I04",
+            "Pharmakon1600-00330017",
+            "HY-B1113",
+            "O,O-Diaethyl-O-(2-isopropyl-4-methyl)-6-pyrimidyl-thionophosphat",
+            "o,o-diethyl o-2-isopropyl-6-methylpyrimidin-4-yl phosphorothioate",
+            "Diazinon 100 microg/mL in Acetone",
+            "Tox21_111077",
+            "Tox21_201409",
+            "Tox21_300730",
+            "BDBM50005409",
+            "CCG-39143",
+            "ENT 19507",
+            "MFCD00036204",
+            "NSC755893",
+            "O,O-Diaethyl-O-(2-isopropyl-4-methyl-pyrimidin-6-yl)-monothiophosphat",
+            "O,O-Dietil-O-(2-isopropil-4-metil-pirimidin-6-il)-monotiofosfato",
+            "Diazinon 10 microg/mL in Cyclohexane",
+            "Diazinon 1000 microg/mL in Toluene",
+            "AKOS025311513",
+            "Diazinon 1000 microg/mL in Methanol",
+            "diethoxy-(2-isopropyl-6-methyl-pyrimidin-4-yl)oxy-thioxo-$l^{5}-phosphane",
+            "O,O-diethyl O-(6-methyl-2-(1-methylethyl)-4-pyrimidinyl) phosphorothioate",
+            "Tox21_111077_1",
+            "CS-4712",
+            "Diazinon 10 microg/mL in Acetonitrile",
+            "Diazinon 100 microg/mL in Cyclohexane",
+            "NSC-755893",
+            "Diazinon 100 microg/mL in Acetonitrile",
+            "NCGC00091073-02",
+            "NCGC00091073-03",
+            "NCGC00091073-04",
+            "NCGC00091073-05",
+            "NCGC00091073-06",
+            "NCGC00091073-07",
+            "NCGC00254636-01",
+            "NCGC00258960-01",
+            "SMR000777921",
+            "SBI-0052498.P002",
+            "DB-048387",
+            "Diazinon, PESTANAL(R), analytical standard",
+            "NS00008266",
+            "D07856",
+            "F88283",
+            "AB00053004_04",
+            "Q411202",
+            "SR-01000872734",
+            "Q-200952",
+            "SR-01000872734-1",
+            "BRD-K60567437-001-04-5",
+            "Diazinon, certified reference material, TraceCERT(R)",
+            "4-Pyrimidinol, O-ester with O,O-diethyl phosphorothioate",
+            "WLN: T6N CNJ BY1 & 1 DOPS & O2 & O2 F1",
+            "O, O-Diethyl 2-isopropyl-4-methylpyrimidyl-6-thiophosphate",
+            "O,O-Diethyl-O-(2-isopropyl-4-methylpyrimidyl)thiophosphate",
+            "o,o-Dietil-o-(2-isopropil-4-metil-pirimidin-il)-monotiofosato",
+            "Phosphorothioate,O-diethyl O-6-(2-isopropyl-4-methylpyrimidyl)",
+            "O,O-Diethyl O-(2-isopropyl-6-methyl-4-primidinyl)phosphorothioate",
+            "O,O-Diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl) thiophosphate",
+            "O,O-Diethyl o-(2-isopropyl-6-methyl-4-pyrimidinyl) thiophosphate #",
+            "O,O-diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl)thio-phosphate",
+            "o,o-diethyl o-(2-isopropyl-6-methylpyrimidin-4-yl) phosphorothioate",
+            "O,O-Diethyl-O-(2-isopropyl-4-methyl-6-pyrimidyl) thiophosphate",
+            "diethoxy-(6-methyl-2-propan-2-ylpyrimidin-4-yl)oxy-sulfanylidenephosphorane",
+            "O,O-diethyl O-[6-methyl-2-(propan-2-yl)pyrimidin-4-yl] phosphorothioate",
+            "o,o-Diethyl-O-(6-methyl-2-(1-methylethyl)-4-pyrimidinyl)phosophorothioate",
+            "Phosphorothioic acid, O,O-diethyl 2-isopropyl-6-methyl-4-pyrimidinyl ester",
+            "Phosphorothioic acid,O-diethyl O-(2-isopropyl-6-methyl-4-pyrimidinyl) ester",
+            "diethoxy-(6-methyl-2-propan-2-ylpyrimidin-4-yl)oxy-sulfanylidene-$l^{5-phosphane",
+            "diethoxy-(6-methyl-2-propan-2-ylpyrimidin-4-yl)oxy-sulfanylidene-lambda5-phosphane",
+            "ethyl 6-methyl-2-(propan-2-yl)pyrimidin-4-yl ethoxy(sulfanylidene)phosphonite",
+            "PHOSPHOROTHIOIC ACID O,O-DIETHYL O-(6-METHYL-2-(1-METHYLETHYL)-4-PYRIMIDINYL) ESTER",
+            "Phosphorothioic acid, O,O-diethyl {O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl]} ester",
+            "PHOSPHOROTHIOIC ACID,O-DIETHYL O-[6-METHYL-2-(1-METHYLETHYL)-4-PYRIMIDINYL] ESTER",
+            "InChI=1/C12H21N2O3PS/c1-6-15-18(19,16-7-2)17-11-8-10(5)13-12(14-11)9(3)4/h8-9H,6-7H2,1-5H3"
+        ]
+    },
+    "properties": [
+        {
+            "aggregate": 346.75,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "range": {
+                                "max": 313.71,
+                                "mean": 307.32,
+                                "min": 300.93
+                            }
+                        }
+                    },
+                    "type": "flash_point",
+                    "value": 307.32
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "measurement_type": "closed cup"
+                        }
+                    },
+                    "type": "flash_point",
+                    "value": 377.55
+                },
+                {
+                    "metadata": {},
+                    "type": "flash_point",
+                    "value": 355.37
+                }
+            ],
+            "type": "flash_point"
+        },
+        {
+            "aggregate": 532.33,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 1340
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 1160
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rabbit"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 130
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "mouse"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 187
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "mouse"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 96
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "mouse"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 82
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 422
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 300
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 435
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 235
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 1250
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 1012
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 696
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 250
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 285
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 108
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 76
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat",
+                            "range": {
+                                "max": 400,
+                                "mean": 350,
+                                "min": 300
+                            }
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 350
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 66
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "mouse"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 17
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rabbit"
+                        }
+                    },
+                    "type": "oral_toxicity",
+                    "value": 143
+                }
+            ],
+            "type": "oral_toxicity"
+        },
+        {
+            "aggregate": 196.07,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "pressure": 0
+                        }
+                    },
+                    "type": "boiling_point",
+                    "value": 398.15
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "state_change_info": {
+                                "decomposes": true
+                            }
+                        }
+                    },
+                    "type": "boiling_point",
+                    "value": 393.15
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "state_change_info": {
+                                "decomposes": true
+                            }
+                        }
+                    },
+                    "type": "boiling_point",
+                    "value": 0
+                }
+            ],
+            "type": "boiling_point"
+        },
+        {
+            "aggregate": 298.15,
+            "all_measurements": [
+                {
+                    "metadata": {},
+                    "type": "melting_point",
+                    "value": 298.15
+                }
+            ],
+            "type": "melting_point"
+        },
+        {
+            "aggregate": 1.12,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "substance_temperature": 293.15
+                        }
+                    },
+                    "type": "specific_gravity",
+                    "value": 1.12
+                }
+            ],
+            "type": "specific_gravity"
+        },
+        {
+            "all_measurements": [
+                {
+                    "metadata": {},
+                    "type": "vapor_pressure",
+                    "value": 0.01
+                },
+                {
+                    "metadata": {},
+                    "type": "vapor_pressure",
+                    "value": 0
+                }
+            ],
+            "type": "vapor_pressure"
+        },
+        {
+            "aggregate": 15.54,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "inhalation_toxicity",
+                    "value": 9.32
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "inhalation_toxicity",
+                    "value": 21.76
+                }
+            ],
+            "type": "inhalation_toxicity"
+        },
+        {
+            "aggregate": 1100,
+            "all_measurements": [
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 2150
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 455
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 900
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rabbit"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 2020
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 900
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 445
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rat"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 180
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "mouse"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 2750
+                },
+                {
+                    "metadata": {
+                        "misc": {
+                            "animal": "rabbit"
+                        }
+                    },
+                    "type": "dermal_toxicity",
+                    "value": 180
+                }
+            ],
+            "type": "dermal_toxicity"
+        },
+        {
+            "aggregate": 0,
+            "codes": [
+                {
+                    "code": "H302",
+                    "percentage": 73.1
+                },
+                {
+                    "code": "H312",
+                    "percentage": 24.5
+                },
+                {
+                    "code": "H341",
+                    "percentage": 16.2
+                },
+                {
+                    "code": "H350",
+                    "percentage": 16.7
+                },
+                {
+                    "code": "H370",
+                    "percentage": 16.7
+                },
+                {
+                    "code": "H373",
+                    "percentage": 16.7
+                },
+                {
+                    "code": "H400",
+                    "percentage": 99.5
+                },
+                {
+                    "code": "H410",
+                    "percentage": 75.9
+                }
+            ],
+            "type": "hcodes"
+        }
+    ]
+}

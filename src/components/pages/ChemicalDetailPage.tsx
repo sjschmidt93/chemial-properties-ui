@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { SearchChemicalsResponse } from '../../types/SearchChemicalsResponseType';
 import mockResponse from '../../../mocks/mock-get-chemical-response.json';
+import { searchChemicals } from '../../api/chemical-properties-api';
 
 export function ChemicalDetailPage() {
   const { inchiKey } = useParams<{ inchiKey: string }>();
@@ -15,18 +16,9 @@ export function ChemicalDetailPage() {
   useEffect(() => {
     const fetchChemicalDetails = async () => {
       try {
-        const response = await axios.get(
-          `https://w972i5rc5l.execute-api.us-east-2.amazonaws.com/v0/?search=${inchiKey}&return_all=true`,
-          {
-            headers: {
-              Authorization: 'Bearer e53c49c7df86fb1bc9c0361ff31a709d9d7eea12'
-            }
-          }
-        );
-        setSearchChemicalResponse(response.data);
+        const response = await searchChemicals(inchiKey ?? '', true);
+        setSearchChemicalResponse(response);
       } catch (err) {
-        setSearchChemicalResponse(mockResponse);
-        // setError('Failed to fetch chemical details');
         console.error('Error fetching chemical details:', err);
         setLoading(false);
       } finally {

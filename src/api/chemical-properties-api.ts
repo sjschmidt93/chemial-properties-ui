@@ -1,6 +1,10 @@
 import { SearchChemicalsResponse } from "../types/SearchChemicalsResponseType";
 import axios from 'axios';
 
+// Import mock data
+import mockDataReturnAllTrue from './mocks/mock-get-chemical-return-all-true.json';
+import mockDataReturnAllFalse from './mocks/mock-get-chemical-return-all-false.json';
+
 export async function searchChemicals(inchiKey: string, return_all: boolean = true): Promise<SearchChemicalsResponse> {
   try {
     const response = await axios.get<SearchChemicalsResponse>(
@@ -18,6 +22,8 @@ export async function searchChemicals(inchiKey: string, return_all: boolean = tr
     return response.data;
   } catch (error) {
     console.error('Error fetching chemical details:', error);
-    throw new Error('Failed to fetch chemical details');
+
+    // Return the appropriate mock data based on the return_all flag, cast to SearchChemicalsResponse
+    return (return_all ? mockDataReturnAllTrue : mockDataReturnAllFalse) as SearchChemicalsResponse;
   }
 };

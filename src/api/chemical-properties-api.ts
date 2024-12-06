@@ -15,7 +15,8 @@ export async function searchChemicals(inchiKey: string, return_all: boolean = tr
           return_all: return_all
         },
         headers: {
-          Authorization: 'Bearer e53c49c7df86fb1bc9c0361ff31a709d9d7eea12'
+          Authorization: 'Bearer e53c49c7df86fb1bc9c0361ff31a709d9d7eea12',
+          Origin: encodeURIComponent('https://chemical-properties-ui.vercel.app ')
         }
       }
     );
